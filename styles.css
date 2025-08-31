@@ -1,0 +1,203 @@
+/*Genel stil */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #0056b3;
+}
+
+/* Classes bölümündeki stil */
+.classes {
+  text-align: center;
+  padding: 50px;
+  background-color: #fff;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.tab.hover {
+  background-color: #0056b3;
+}
+
+.class-description {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.class-description ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.class-description ul li {
+  margin: 5px 0;
+}
+
+.classes-btn {
+  margin-left: 40px;
+}
+
+.yoga-image {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* BMI Calculator bölümündeki stil */
+.bmi-calculator {
+  color: #333;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.bmi-calculator p {
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+
+.bmi-calculator form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.bmi-calculator label {
+  margin-top: 10px;
+}
+
+.bmi-calculator input {
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: none;
+  border-radius: 5px;
+  width: 220px;
+}
+
+.bmi-calculator button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.bmi-calculator button:hover {
+  background-color: #cc5200;
+}
+
+.bmi-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px; /* form ile bmi-chart arasındaki boşluk */
+  margin-top: 50px;
+}
+
+.bmi-image img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* BMI CHART */
+.bmi-chart {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bmi-chart div {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.underweight {
+  background-color: #00cc66;
+}
+.normal {
+  background-color: #66cc66;
+}
+.overweight {
+  background-color: #ffcc00;
+  color: #222;
+}
+.obese {
+  background-color: #ff6600;
+}
+.extremely-obese {
+  background-color: #cc0000;
+}
+
+/* BMI OK */
+.bmi-arrow-container {
+  position: relative;
+  margin-top: 15px;
+}
+
+.bmi-arrow-container {
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.bmi-arrow {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 20px solid #ff6600;
+  margin: 0 auto;
+  transition: transform 0.5s ease;
+}
+
+/*Üçgen ikonunun hareketi için animasyon */
+.move-arrow-underweight {
+  transform: translateX(-180px);
+}
+.move-arrow-normal {
+  transform: translateX(-90px);
+}
+.move-arrow-overweight {
+  transform: translateX(0);
+}
+.move-arrow-obese {
+  transform: translateX(90px);
+}
+.move-arrow-extremely-obese {
+  transform: translateX(180px);
+}
