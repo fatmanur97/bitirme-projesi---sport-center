@@ -1,127 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sport Center</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="header.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Powerfull - Fitness Landing</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header / Navbar -->
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#home">
+          <img src="Resimler/logo.png" alt="Powerfull Logo" class="logo" />
+        </a>
 
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#home">Home</a>
+          <a href="#classes">Classes</a>
+          <a href="#trainers">Trainers</a>
+          <a href="#review">Review</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact" class="btn btn-primary">Join Us</a>
+        </nav>
 
-    <!-- Navigation Bar Start -->
-     <body>
-    <header id="header" class="fixed-top">
-    <div class="container">
-        <div class="logo">
-            <img src="resimler/logo.png" class="logo-img" width="16" height="16" alt="logo">
+        <button class="burger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <section id="home" class="hero" role="banner">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <span class="pill">POWERFULL</span>
+        <h1>
+          Group <br />
+          Practice <br />
+          With Trainer
+        </h1>
+        <p class="blurb">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus odit aut iste. Velit porro rerum, unde modi ipsam
+          exercitationem laudantium illum. Id, laborum? Totam, dicta nisi.
+          Voluptates, vero id. Perferendis.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary btn-hero" href="#contact">Sign Up</a>
+          <a class="btn btn-ghost" href="#classes">Details</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section" aria-label="Site statistics">
+      <div class="container stats-grid">
+        <div class="stat">
+          <div class="num">325</div>
+          <div class="label">Course</div>
+        </div>
+        <div class="stat">
+          <div class="num">405</div>
+          <div class="label">Work Out</div>
+        </div>
+        <div class="stat">
+          <div class="num">305</div>
+          <div class="label">Working Hour</div>
+        </div>
+        <div class="stat">
+          <div class="num">705</div>
+          <div class="label">Happy Client</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classes -->
+    <section id="classes" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Our Classes</h2>
+          <p>
+            Lorem ipsum is not simply random text. It has roots in a piece of
+            classical at Hampden-Sydney College.
+          </p>
+        </header>
+
+        <div class="chip-row">
+          <button class="chip is-active" data-class="yoga" aria-pressed="true">
+            Yoga
+          </button>
+          <button class="chip" data-class="group" aria-pressed="false">
+            Group
+          </button>
+          <button class="chip" data-class="solo" aria-pressed="false">
+            Solo
+          </button>
+          <button class="chip" data-class="stretch" aria-pressed="false">
+            Stretching
+          </button>
         </div>
 
-    <nav id="navbar" class="navbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria current="page" href="#header">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#classes">Classes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#trainer">Trainer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#review">Review</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#joinus">JOIN US</a>
-                </li>
+        <div class="class-grid">
+          <article class="class-card is-show" data-tag="yoga">
+            <div class="class-body">
+              <h3>Why are your Yoga?</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est,
+                sed! Placeat, officia ratione eligendi nam necessitatibus sed
+                repellat recusandae rerum facere optio minima consequatur
+                voluptatem omnis facilis ipsam beatae dolor.
+              </p>
 
-            </ul>
+              <h4 class="subhead">When comes Yoga Your Time.</h4>
+              <ul class="schedule">
+                <li><strong>Saturday–Sunday:</strong> 8:00am – 10:00am</li>
+                <li><strong>Monday–Tuesday:</strong> 10:00am – 12:00pm</li>
+                <li><strong>Wednesday–Friday:</strong> 3:00pm – 6:00pm</li>
+              </ul>
+            </div>
+            <figure class="class-side">
+              <img src="Resimler/yoga.jpg" alt="Yoga pose" />
+            </figure>
+          </article>
+
+          <article class="class-card" data-tag="group" hidden>
+            <div class="class-body">
+              <h3>Group Workout</h3>
+              <p>
+                Collaborative energy and curated routines to keep you motivated
+                and consistent.
+              </p>
+              <ul class="schedule">
+                <li><strong>Daily:</strong> 7:00–8:00pm</li>
+              </ul>
+            </div>
+            <figure class="class-side">
+              <img src="Resimler/group.webp" alt="Group training" />
+            </figure>
+          </article>
+
+          <article class="class-card" data-tag="solo" hidden>
+            <div class="class-body">
+              <h3>Solo Training</h3>
+              <p>
+                Personalized plans designed around your pace, focus, and goals.
+              </p>
+              <ul class="schedule">
+                <li><strong>By Appt:</strong> 9:00–18:00</li>
+              </ul>
+            </div>
+            <figure class="class-side">
+              <img src="Resimler/solo.jpg" alt="Solo training" />
+            </figure>
+          </article>
+
+          <article class="class-card" data-tag="stretch" hidden>
+            <div class="class-body">
+              <h3>Stretching</h3>
+              <p>
+                Mobility sessions to improve flexibility and reduce injury risk.
+              </p>
+              <ul class="schedule">
+                <li><strong>MWF:</strong> 6:30–7:15am</li>
+              </ul>
+            </div>
+            <figure class="class-side">
+              <img src="Resimler/stret.webp" alt="Stretch class" />
+            </figure>
+          </article>
         </div>
-    </nav>
-</header>
-<script src ="main.js"></script>
-     </body>                
-    <!-- Navigation Bar End -->
+      </div>
+    </section>
 
-     <!-- hero start -->
-<section id="hero">
-    <img src="resimler/hero-man.jpg" alt="hero image" class="hero-man"></img>
-</section>
+    <!-- BMI -->
+    <section id="bmi" class="section alt">
+      <div class="container bmi">
+        <div class="bmi-copy">
+          <h2>BMI Calculator</h2>
 
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old.
+          </p>
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old.
+          </p>
 
+          <form id="bmi-form" class="bmi-form">
+            <label class="in-unit">
+              <input
+                id="height"
+                type="number"
+                min="50"
+                max="250"
+                step="1"
+                inputmode="numeric"
+                placeholder="Your Height"
+                required
+              />
+              <span class="unit">cm</span>
+            </label>
+            <label class="in-unit">
+              <input
+                id="weight"
+                type="number"
+                min="10"
+                max="300"
+                step="0.1"
+                inputmode="decimal"
+                placeholder="Your Weight"
+                required
+              />
+              <span class="unit">kg</span>
+            </label>
+            <button class="btn btn-primary" type="submit">Calculate</button>
+          </form>
 
-
-
-
-
-
-
-
-
-    <div class="container">
-      <section class="Classes" id="classes">
-        <section class="container">
-        <div class="classes info">
-            <h1>OUR CLASSSES</h1>
-            <p>Lorem ipsum is not simply random text. It has roots in a piece of classical a Hampden-Sydney College.
-            </p>
+          <div class="bmi-result" id="bmi-result" aria-live="polite"></div>
         </div>
-        <div class="classes-btn">
-            <button class="classes btn Yoga" id="Yoga">Yoga</button>
-            <button class="classes btn Group" id="Group">Group</button>
-            <button class="classes btn Solo" id="Solo">Solo</button>
-            <button class="classes btn Streching" id="Streching">Streching</button>
-        </div>
 
-        <div class="classes-cards">
-            <div class="card">
-                <h1>Why are your Yoga?</h1>
-                <p class="class-p-info">
-                    Lorem ipsum sit amet, consectetur adipiscing elit. Parlatur passimus voluptatum impedit adlit perferendis. Doloremque, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+        <figure class="bmi-figure">
+          <h3 class="side-title">Your BMI</h3>
+          <div class="bmi-scale">
+            <img src="Resimler/bmi-index.jpg" alt="Body Mass Index chart" />
+            <!-- moving indicator -->
+            <div class="bmi-pointer" aria-hidden="true" title="Your BMI"></div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Trainers -->
+    <section id="trainers" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Our Best Trainers</h2>
+          <p>
+            Lorem ipsum is not simply random text. It has roots in a piece of
+            classical at Hampden-Sydney College.
+          </p>
+        </header>
+        <div class="card-grid">
+          <article class="t-card">
+            <img src="Resimler/trainer1.jpg" alt="Trainer 1" />
+            <div class="t-info">
+              <h3>Alex Smith</h3>
+              <span>HIIT Coach</span>
+            </div>
+          </article>
+          <article class="t-card">
+            <img src="Resimler/trainer2.jpg" alt="Trainer 2" />
+            <div class="t-info">
+              <h3>Maria Lopez</h3>
+              <span>Strength Coach</span>
+            </div>
+          </article>
+          <article class="t-card">
+            <img src="Resimler/trainer3.jpg" alt="Trainer 3" />
+            <div class="t-info">
+              <h3>Jane Doe</h3>
+              <span>Cardio Trainer</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="shop" class="section alt">
+      <div class="container">
+        <header class="section-head">
+          <h2>Purchase From Us</h2>
+          <p>
+            Lorem ipsum is not a simply random text. It has roots in a piece of
+            classical at Hampden-Sydney College.
+          </p>
+        </header>
+
+        <div class="carousel" data-autoscroll="true">
+          <div class="carousel-track">
+            <article class="p-card">
+              <img src="Resimler/purchase1.jpg" alt="Kettlebell 5kg" />
+              <div class="p-body">
+                <h3>Kettlebell | 5kg</h3>
+                <p class="price">
+                  <span class="old">$89.99</span>
+                  <span class="new">$59.99</span>
                 </p>
-                <h1>When comes Yoga Your Time.</h1>
-                <p class="class-p-info">Sturday-Sunday: 8:00am - 10:00am
-                    Monday-Tuesday: 10:00am - 12:00pm
-                    Wednesday-Friday: 3:00pm - 8:00pm</p>
-            </div>
-            <img src="Resimler/yoga.jpg" alt="yoga" />  
+                <button class="btn btn-primary">Add To Cart</button>
+              </div>
+            </article>
+
+            <article class="p-card">
+              <img src="Resimler/purchase2.jpg" alt="Treadmill" />
+              <div class="p-body">
+                <h3>Treadmill</h3>
+                <p class="price">
+                  <span class="old">$999.00</span>
+                  <span class="new">$899.00</span>
+                </p>
+                <button class="btn btn-primary">Add To Cart</button>
+              </div>
+            </article>
+
+            <article class="p-card">
+              <img src="Resimler/purchase3.jpg" alt="Adjustable Dumbbell" />
+              <div class="p-body">
+                <h3>Adjustable Dumbbell</h3>
+                <p class="price">
+                  <span class="old">$199.00</span>
+                  <span class="new">$149.00</span>
+                </p>
+                <button class="btn btn-primary">Add To Cart</button>
+              </div>
+            </article>
+
+            <article class="p-card">
+              <img src="Resimler/purchase4.jpg" alt="Kettlebell 3kg" />
+              <div class="p-body">
+                <h3>Kettlebell | 3kg</h3>
+                <p class="price">
+                  <span class="old">$34.99</span>
+                  <span class="new">$24.99</span>
+                </p>
+                <button class="btn btn-primary">Add To Cart</button>
+              </div>
+            </article>
+          </div>
         </div>
-      </section>
+      </div>
     </section>
 
-    <section class="bmi-calculator">
-        <h2>BMI Calculator</h2>
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
-        <form>
-            <label for="height">Your Height</label>
-            <input type="number" id="height" name="height" placeholder="cm">
-            <label for="weight">Your Weight</label>
-            <input type="number" id="weight" name="weight" placeholder="kg">
-            <button type="submit">Calculate</button>
-        </form>
-        <div class="bmi-result">
-            <p>Your BMI</p>
-            <div class="bmi-chart">
-                <div class="underweight">underweight</div>
-                <div class="normal">normal</div>
-                <div class="overweight">overweight</div>
-                <div class="obese">obese</div>
-                <div class="extremely-obese">extremely obese</div>
+    <!-- Reviews -->
+    <section id="review" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>Review Client</h2>
+          <p>
+            Lorem ipsum is not simply random text. It has roots in a piece of
+            classical at Hampden-Sydney College.
+          </p>
+        </header>
+        <div class="reviews">
+          <article class="review">
+            <img src="Resimler/client1.jpg" alt="Client 1" class="avatar" />
+            <div>
+              <h3>Diet Expert <span class="role">CFO</span></h3>
+              <p>
+                "Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Mollitia, voluptatum eveniet? Officiis, quibusdam sit aliquam
+                esse cum sapiente doloremque placeat? Quas velit rerum magnam
+                reiciendis eos quasi cupiditate excepturi sit!"
+              </p>
             </div>
+          </article>
+          <article class="review">
+            <img src="Resimler/client2.jpg" alt="Client 2" class="avatar" />
+            <div>
+              <h3>Cardio Trainer <span class="role">CEO</span></h3>
+              <p>
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
+                nisi beatae iure nostrum quidem voluptatum tenetur aperiam
+                reiciendis, enim qui reprehenderit ullam quam tempora dolorem
+                autem delectus. Quae, eos ut!"
+              </p>
+            </div>
+          </article>
         </div>
-
-        <div class="bmi-arrow-container">
-            <div class="bmi-arrow"></div> <!-- Üçgen ikon -->
-        </div>
-
-        <div class="bmi-index-image">
-            <img src="Resimler/bmi-index.jpg" alt="bmi görseli">
-        </div>
+      </div>
     </section>
-     <!--hero end -->
 
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+      <div class="container contact">
+        <header class="section-head">
+          <h2>Contact Us</h2>
+          <p>
+            Have questions? Make an appointment and our team will reach out.
+          </p>
+        </header>
 
+        <!-- left column -->
+        <div class="contact-copy">
+          <div class="contact-info">
+            <div class="item">
+              <div class="label">Mobile Number</div>
+              <div class="val">+1 875 732 4452</div>
+            </div>
+            <div class="item">
+              <div class="label">Email Address</div>
+              <div class="val">demo@demo.com</div>
+            </div>
+          </div>
+
+          <h3 class="contact-subhead">Make An Appointment</h3>
+
+          <form
+            class="contact-form"
+            onsubmit="event.preventDefault(); alert('Thanks! We will contact you.');"
+          >
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="4" placeholder="Your Message"></textarea>
+            <button class="btn btn-primary">Send</button>
+          </form>
+        </div>
+
+        <!-- right column -->
+        <div class="map-wrap">
+          <iframe
+            src="https://maps.google.com/maps?q=Antalya&t=&z=12&ie=UTF8&iwloc=&output=embed"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <!-- Logo + description on top -->
+        <div class="footer-top">
+          <a class="brand" href="#home">
+            <img src="Resimler/logo.png" class="logo" alt="" />
+          </a>
+          <p class="muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+            possimus earum praesentium, cupiditate eum molestias sed officia
+            eaque harum totam omnis error exercitationem accusamus, ratione non
+            optio assumenda. Voluptatem, nam!
+          </p>
+        </div>
+
+        <!-- Two columns of links below -->
+        <div class="footer-links">
+          <nav>
+            <h4>Information</h4>
+            <a href="#about">About Us</a>
+            <a href="#classes">Classes</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+          </nav>
+          <nav>
+            <h4>Helpful Links</h4>
+            <a href="#services">Services</a>
+            <a href="#support">Supports</a>
+            <a href="#terms">Terms & Condition</a>
+            <a href="#privacy">Privacy Policy</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
